@@ -1,0 +1,17 @@
+nav{
+  background-color: #37A8EA;
+}
+
+nav ul li{
+  display: inline-block;
+}
+
+nav ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+.seleccionado{
+  background-color: white;
+  color:black;
+}

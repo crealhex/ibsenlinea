@@ -1,6 +1,7 @@
 # Ignoring IntelliJ files/folders
 .idea/
 *.iml
+out/
 
 #Ignoring Netbeans Default Archives
 /build/
