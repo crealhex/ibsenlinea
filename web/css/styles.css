@@ -1,17 +1,19 @@
-nav{
+nav {
   background-color: #37A8EA;
 }
 
-nav ul li{
+nav ul li {
   display: inline-block;
 }
 
-nav ul li a{
+nav ul li a {
   color: white;
   text-decoration: none;
+  display: inherit;
+  padding: 15px;
 }
 
-.seleccionado{
+.seleccionado {
   background-color: white;
   color:black;
 }
