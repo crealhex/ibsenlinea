@@ -1,3 +1,10 @@
+<%-- 
+    Document   : register
+    Created on : 27/02/2020, 04:50:20 PM
+    Author     : dolly
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="es">
 <head>
@@ -25,7 +32,33 @@
         </nav>
     </div>
     <div>
-        <p style="font-size: 1.25rem;">Sorry. We don't enable scholarships yet :(</p>
+        <form action="">
+            <label>
+                Nombre y Apellido
+                <br>
+                <input type="text">
+            </label>
+            <br><br>
+            <label>
+                Correo
+                <br>
+                <input type="text">
+            </label>
+            <br><br>
+            <label>
+                Contraseña
+                <br>
+                <input type="text">
+            </label>
+            <br><br>
+            <label>
+                Repetir Contraseña
+                <br>
+                <input type="text">
+            </label>
+            <br><br>
+            <button>Registrarse</button>
+        </form>
     </div>
 </body>
 </html>

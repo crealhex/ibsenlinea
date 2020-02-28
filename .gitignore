@@ -2,3 +2,7 @@
 .idea/
 *.iml
 
+#Ignoring Netbeans Default Archives
+/build/
+build.xml
+nbproject/

@@ -1,3 +1,10 @@
+<%-- 
+    Document   : micuenta
+    Created on : 27/02/2020, 04:50:56 PM
+    Author     : dolly
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="es">
 <head>

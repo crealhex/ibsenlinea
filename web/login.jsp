@@ -1,3 +1,10 @@
+<%-- 
+    Document   : Login
+    Created on : 27/02/2020, 04:50:06 PM
+    Author     : dolly
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="es">
 <head>
@@ -24,34 +31,22 @@
             </ul>
         </nav>
     </div>
-    <table border="1" cellpadding="10">
-        <thead>
-            <tr>
-                <th>DNI</th>
-                <th>Nombre</th>
-                <th>Tipo</th>
-                <th>Fecha de inicio</th>
-                <th>Total</th>
-                <th>Pendiente</th>
-                <th>Cuotas</th>
-                <th>Pago por mes</th>
-                <th>Fecha de Mensualidad</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>73822427</td>
-                <td>Luis Enco</td>
-                <td>Préstamo</td>
-                <td>15/08/2017</td>
-                <td>300 PEN</td>
-                <td>200 PEN</td>
-                <td>3</td>
-                <td>100 PEN</td>
-                <td>30</td>
-                <td><a href="/ibsenlinea/web/pagar.html">Realizar pago</a></td>
-            </tr>
-        </tbody>
-    </table>
+    <div>
+        <form action="">
+            <label>
+                Correo
+                <br>
+                <input type="text">
+            </label>
+            <br><br>
+            <label>
+                Contraseña
+                <br>
+                <input type="text">
+            </label>
+            <br><br>
+            <button>Iniciar sesión</button>
+        </form>
+    </div>
 </body>
 </html>
