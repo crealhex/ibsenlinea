@@ -15,22 +15,49 @@
     <title>IBS-PE</title>
 </head>
 <body>
+    
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .box-mc h1{
+           position: relative;
+           top: -15px;
+           color: #B22121;        }
+        .box-mc{
+            width: 300px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: #2289C6;
+        }
+        .buttom-text-mc a{
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px;
+            color: black;
+        }
+        .buttom-text-mc .right{
+            text-align: right;
+            margin-top: 30px;
+        }
+    </style>
+    
     <div>
-        <h1>Institutional Bank of Students</h1>
-        <nav>
-            <ul>
-                <li><a href="/ibsenlinea/web/">Inicio</a></li>
-                <li><a href="/ibsenlinea/web/deudas.html">Deudas</a></li>
-                <li><a href="/ibsenlinea/web/becas.html">Becas</a></li>
-                <li><a href="/ibsenlinea/web/otros.html">Otros</a></li>
-            </ul>
-            <ul>
-                <li><a href="/ibsenlinea/web/cuenta.html">Mi Cuenta</a></li>
-                <li><a href="/ibsenlinea/web/registrarse.html">Registrarse</a></li>
-                <li><a href="/ibsenlinea/web/ingresar.html">Ingresar</a></li>
-            </ul>
-        </nav>
-    </div>
-    <h2>Account: <span>Luis Enco</span></h2>
+        <form class ="box-mc" action="index.jsp" method="post">
+        <h1>Usuario X</h1>
+        <div class="buttom-text-mc">
+            <a href="Prestamos.jsp">Mis prestamos</a>
+            <a href="#">Cambiar contraseña</a>
+            <div class="right">
+        <input type="submit" name="" value="Cerrar sesión">
+            </div>
+        </div>
+        </form>
 </body>
 </html>

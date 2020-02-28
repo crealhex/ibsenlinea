@@ -15,37 +15,62 @@
     <title>IBS-PE</title>
 </head>
 <body>
+    
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .box h1{
+           position: relative;
+           top: -15px;
+        }
+        .box{
+            width: 300px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: #2289C6;
+        }
+        .box input[type = "text"], .box input[type ="password"]{
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 1px solid white;
+            padding: 10px 10px;
+            width: 200px;
+            color: black;
+        }
+        .box input[type = "submit"]{
+            width: 100px;
+        }
+        .buttom-text{
+            padding: 8px;
+        }
+        .buttom-text a{
+            text-decoration: none;
+            color: blue;
+        }
+       
+        
+        
+    </style>
+  
     <div>
-        <h1>Institutional Bank of Students</h1>
-        <nav>
-            <ul>
-                <li><a href="/ibsenlinea/web/">Inicio</a></li>
-                <li><a href="/ibsenlinea/web/deudas.html">Deudas</a></li>
-                <li><a href="/ibsenlinea/web/becas.html">Becas</a></li>
-                <li><a href="/ibsenlinea/web/otros.html">Otros</a></li>
-            </ul>
-            <ul>
-                <li><a href="/ibsenlinea/web/cuenta.html">Mi Cuenta</a></li>
-                <li><a href="/ibsenlinea/web/registrarse.html">Registrarse</a></li>
-                <li><a href="/ibsenlinea/web/ingresar.html">Ingresar</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div>
-        <form action="">
-            <label>
-                Correo
-                <br>
-                <input type="text">
-            </label>
-            <br><br>
-            <label>
-                Contraseña
-                <br>
-                <input type="text">
-            </label>
-            <br><br>
-            <button>Iniciar sesión</button>
+        <form class ="box" action="index.jsp" method="post">
+            <h1>Login</h1>
+            <input type="text" name="" placeholder="Username">
+            <input type="password" name="" placeholder="Password">
+            <input type="submit" name="" value="Login">
+            <div class="buttom-text">
+                ¿No tienes una cuenta?<a href="register.jsp"> Registrate</a>
+            </div>
         </form>
     </div>
 </body>
