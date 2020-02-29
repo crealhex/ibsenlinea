@@ -1,8 +1,13 @@
+-- MySQL Script
+
+-- create database db_ibsenlinea;
+
 create table student
 (
 	id varchar(10) not null,
 	name varchar(100) not null,
 	email varchar(100) not null,
+	password varchar(150) not null,
 	age int not null
 )
 comment 'table for all students';
@@ -33,7 +38,7 @@ create table service
 )
 comment 'table for all services';
 
-create table user_service
+create table student_service
 (
 	id_student varchar(10) not null,
 	id_service int not null,
@@ -49,11 +54,9 @@ create table user_service
 comment 'this table catch all the services taked by one student';
 
 INSERT INTO student VALUES (73822427, 'Luis Enco', 'encoluis@hotmail.com', 21);
-
 INSERT INTO service VALUES (null, 73822427, 'préstamo', '2020-01-23', 760, 6, 15);
-
-INSERT INTO user_service VALUES (73822427, 1, now(), 8804521487005213, '08/2025', 759);
+INSERT INTO student_service VALUES (73822427, 1, now(), 8804521487005213, '08/2025', 759);
 
 SELECT * FROM student;
 SELECT * FROM service;
-SELECT * FROM user_service;
+SELECT * FROM student_service;
