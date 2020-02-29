@@ -1,4 +1,6 @@
 package com.ibs.enlinea.dao.interfaces;
 
-public interface StudentDAO extends DAO<String, Object> {
+import com.ibs.enlinea.models.Student;
+
+public interface StudentDAO extends DAO<String, Student> {
 }
