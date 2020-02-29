@@ -6,6 +6,7 @@ create table student
 (
 	id varchar(10) not null,
 	name varchar(100) not null,
+	number varchar (15) not null,
 	email varchar(100) not null,
 	password varchar(150) not null,
 	age int not null
@@ -27,13 +28,13 @@ create table service
 	id int auto_increment,
 	id_student varchar(10) not null,
 	type varchar(20) not null,
-	start_at date not null,
+	started_at date not null,
 	amount int not null,
 	dues int not null,
 	payday int not null,
 	constraint service_pk
 		primary key (id),
-	constraint student_fk
+	constraint student__fk
 		foreign key (id_student) references student (id)
 )
 comment 'table for all services';
@@ -53,9 +54,9 @@ create table student_service
 )
 comment 'this table catch all the services taked by one student';
 
-INSERT INTO student VALUES (73822427, 'Luis Enco', 'encoluis@hotmail.com', 21);
-INSERT INTO service VALUES (null, 73822427, 'préstamo', '2020-01-23', 760, 6, 15);
-INSERT INTO student_service VALUES (73822427, 1, now(), 8804521487005213, '08/2025', 759);
+INSERT INTO student (id, name, number, email, password, age) VALUES ('73822427', 'Luis Enco', '+51 995 807 789', 'encoluis@hotmail.com', '3230184', 21);
+INSERT INTO service (id_student, type, started_at, amount, dues, payday) VALUES ('73822427', 'préstamo', '2020-02-10', 1000, 12, 10);
+INSERT INTO student_service (id_student, id_service, card_number, card_date, card_safecode) VALUES ('73822428', 1, '983924893558921', '11/2028', 790);
 
 SELECT * FROM student;
 SELECT * FROM service;

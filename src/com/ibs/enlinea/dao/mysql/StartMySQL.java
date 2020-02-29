@@ -7,9 +7,17 @@ import java.sql.SQLException;
 public class StartMySQL {
 
     Connection connect() throws SQLException {
-        Connection conn;
+
+        Connection conn = null;
         final String URL = "jdbc:mysql://localhost/db_ibsenlinea";
-        conn = DriverManager.getConnection(URL, "root", "");
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection(URL, "root", "");
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         return conn;
     }
 
