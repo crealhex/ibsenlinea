@@ -13,34 +13,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IBS-PE</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
 </head>
 <body>
     
     <jsp:include page="WEB-INF/partials-dinamic/menu.jsp">
         <jsp:param name="menu" value="otros" />
     </jsp:include>
-    
-    <div>
-    </div>
-    
-    <div>
-        <style>
-            nav{
-                background-color: #37A8EA;
-            }
-            nav ul li{
-                display: inline-block;
-            }
-            nav ul li a{
-                color: white;
-                text-decoration: none;
-            }
-            .seleccionado{
-                background-color: white;
-                color:black;
-            }
-        </style>
-    </div>
     
     <div>
         <h2>&copy; Powered by Redhoods</h2>
