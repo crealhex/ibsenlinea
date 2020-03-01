@@ -21,34 +21,7 @@
         <jsp:param name="menu" value="prestamos" />
     </jsp:include>
 
-    <table border="1" cellpadding="10">
-        <thead>
-            <tr>
-                <th>DNI</th>
-                <th>Nombre</th>
-                <th>Tipo</th>
-                <th>Fecha de inicio</th>
-                <th>Total</th>
-                <th>Pendiente</th>
-                <th>Cuotas</th>
-                <th>Pago por mes</th>
-                <th>Fecha de Mensualidad</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>73822427</td>
-                <td>Luis Enco</td>
-                <td>Préstamo</td>
-                <td>15/08/2017</td>
-                <td>300 PEN</td>
-                <td>200 PEN</td>
-                <td>3</td>
-                <td>100 PEN</td>
-                <td>30</td>
-                <td><a href="/ibsenlinea/web/pagar.html">Realizar pago</a></td>
-            </tr>
-        </tbody>
-    </table>
+    <h2>Requisitios para obtener un prestamo</h2>
+    <a href="solicitarprestamo.html">Solicitar prestamo</a>
 </body>
 </html>
