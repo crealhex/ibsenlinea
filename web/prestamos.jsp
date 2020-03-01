@@ -46,7 +46,7 @@
                 <td>3</td>
                 <td>100 PEN</td>
                 <td>30</td>
-                <td><a href="/ibsenlinea/web/pagar.html">Realizar pago</a></td>
+                <td><a href="${pageContext.request.contextPath}/pagar.jsp">Realizar pago</a></td>
             </tr>
         </tbody>
     </table>

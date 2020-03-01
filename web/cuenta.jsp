@@ -54,12 +54,13 @@
         <form class ="box-mc" action="index.jsp" method="post">
         <h1>Username</h1>
         <div class="buttom-text-mc">
-<%--            <a href="Prestamos.jsp">Mis prestamos</a>--%>
+            <a href="${pageContext.request.contextPath}/prestamos.jsp">Mis prestamos</a>
             <a href="#">Configuración</a>
             <div class="right">
                 <button>Cerrar sesión</button>
             </div>
         </div>
         </form>
+    </div>
 </body>
 </html>
