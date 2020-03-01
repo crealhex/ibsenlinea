@@ -16,61 +16,14 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
 </head>
 <body>
-    
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-        }
-        .box h1{
-           position: relative;
-           top: -15px;
-        }
-        .box{
-            width: 300px;
-            padding: 40px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            background-color: #2289C6;
-        }
-        .box input[type = "text"], .box input[type ="password"]{
-            border: 0;
-            background: none;
-            display: block;
-            margin: 20px auto;
-            text-align: center;
-            border: 1px solid white;
-            padding: 10px 10px;
-            width: 200px;
-            color: black;
-        }
-        .box input[type = "submit"]{
-            width: 100px;
-        }
-        .buttom-text{
-            padding: 8px;
-        }
-        .buttom-text a{
-            text-decoration: none;
-            color: blue;
-        }
-       
-        
-        
-    </style>
-  
     <div>
         <form class ="box" action="index.jsp" method="post">
-            <h1>Login</h1>
-            <input type="text" name="" placeholder="Username">
-            <input type="password" name="" placeholder="Password">
+            <h1>Iniciar sesión</h1>
+            <input type="text" name="" placeholder="Correo">
+            <input type="password" name="" placeholder="Contraseña">
             <input type="submit" name="" value="Login">
             <div class="buttom-text">
-                ¿No tienes una cuenta?<a href="register.jsp"> Registrate</a>
+                ¿No tienes una cuenta? <a href="register.jsp">Registrate</a>
             </div>
         </form>
     </div>

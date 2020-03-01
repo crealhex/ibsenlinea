@@ -26,7 +26,8 @@
         .box-mc h1{
            position: relative;
            top: -15px;
-           color: #B22121;        }
+           /*color: #B22121;        */
+        }
         .box-mc{
             width: 300px;
             padding: 40px;
@@ -35,7 +36,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            background-color: #2289C6;
+            /*background-color: #2289C6;*/
         }
         .buttom-text-mc a{
             text-decoration: none;
@@ -44,19 +45,19 @@
             color: black;
         }
         .buttom-text-mc .right{
-            text-align: right;
+            /*text-align: right;*/
             margin-top: 30px;
         }
     </style>
     
     <div>
         <form class ="box-mc" action="index.jsp" method="post">
-        <h1>Usuario X</h1>
+        <h1>Username</h1>
         <div class="buttom-text-mc">
-            <a href="Prestamos.jsp">Mis prestamos</a>
-            <a href="#">Cambiar contraseña</a>
+<%--            <a href="Prestamos.jsp">Mis prestamos</a>--%>
+            <a href="#">Configuración</a>
             <div class="right">
-        <input type="submit" name="" value="Cerrar sesión">
+                <button>Cerrar sesión</button>
             </div>
         </div>
         </form>
