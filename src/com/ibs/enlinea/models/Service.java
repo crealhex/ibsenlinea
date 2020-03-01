@@ -1,26 +1,26 @@
 package com.ibs.enlinea.models;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Service {
     
     private int id;
-    private String id_student;
+    private String idStudent;
     private String type;
-    private LocalDate start_date;
-    private int amount;
-    private int dues;
-    private int payday;
+    private Date startedDate;
+    private float amount;
+    private byte dues;
+    private byte payday;
 
     public Service(){
         
     }
-    
-    public Service(int id, String id_student, String type, LocalDate start_date, int amount, int dues, int payday) {
+
+    public Service(int id, String idStudent, String type, Date startedDate, float amount, byte dues, byte payday) {
         this.id = id;
-        this.id_student = id_student;
+        this.idStudent = idStudent;
         this.type = type;
-        this.start_date = start_date;
+        this.startedDate = startedDate;
         this.amount = amount;
         this.dues = dues;
         this.payday = payday;
@@ -34,12 +34,12 @@ public class Service {
         this.id = id;
     }
 
-    public String getId_student() {
-        return id_student;
+    public String getIdStudent() {
+        return idStudent;
     }
 
-    public void setId_student(String id_student) {
-        this.id_student = id_student;
+    public void setIdStudent(String idStudent) {
+        this.idStudent = idStudent;
     }
 
     public String getType() {
@@ -50,39 +50,48 @@ public class Service {
         this.type = type;
     }
 
-    public LocalDate getStart_date() {
-        return start_date;
+    public Date getStartedDate() {
+        return startedDate;
     }
 
-    public void setStart_date(LocalDate start_date) {
-        this.start_date = start_date;
+    public void setStartedDate(Date startedDate) {
+        this.startedDate = startedDate;
     }
 
-    public int getAmount() {
+    public float getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(float amount) {
         this.amount = amount;
     }
 
-    public int getDues() {
+    public byte getDues() {
         return dues;
     }
 
-    public void setDues(int dues) {
+    public void setDues(byte dues) {
         this.dues = dues;
     }
 
-    public int getPayday() {
+    public byte getPayday() {
         return payday;
     }
 
-    public void setPayday(int payday) {
+    public void setPayday(byte payday) {
         this.payday = payday;
     }
-    
-         
-    
-    
+
+    @Override
+    public String toString() {
+        return "Service{" +
+                "id=" + id +
+                ", idStudent='" + idStudent + '\'' +
+                ", type='" + type + '\'' +
+                ", startedDate=" + startedDate +
+                ", amount=" + amount +
+                ", dues=" + dues +
+                ", payday=" + payday +
+                '}';
+    }
 }

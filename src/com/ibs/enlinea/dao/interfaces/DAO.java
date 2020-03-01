@@ -6,7 +6,7 @@ public interface DAO<Index, Object> {
 
     void create(Object object);
 
-    List<Object> read();
+    List<Object> getAll();
 
     void update(Object object);
 

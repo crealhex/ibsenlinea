@@ -49,7 +49,7 @@ public class StudentMySQL implements StudentDAO {
     }
 
     @Override
-    public List<Student> read() {
+    public List<Student> getAll() {
         List<Student> students = new ArrayList<>();
         try {
             conn = new StartMySQL().connect();

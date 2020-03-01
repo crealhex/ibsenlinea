@@ -29,9 +29,9 @@ create table service
 	id_student varchar(10) not null,
 	type varchar(20) not null,
 	started_at date not null,
-	amount int not null,
-	dues int not null,
-	payday int not null,
+	amount float not null,
+	dues tinyint not null,
+	payday tinyint not null,
 	constraint service_pk
 		primary key (id),
 	constraint student__fk
@@ -46,7 +46,7 @@ create table student_service
 	paid_at date default now() not null,
 	card_number varchar(50) not null,
 	card_date varchar(10) not null,
-	card_safecode int not null,
+	card_safecode smallint not null,
 	constraint id_service___fk
 		foreign key (id_service) references service (id),
 	constraint id_student___fk
