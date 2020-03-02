@@ -11,10 +11,18 @@
 </head>
 <body>
     <jsp:include page="WEB-INF/partials-dinamic/menu.jsp">
-        <jsp:param name="menu" value="inicio" />
+        <jsp:param name="menu" value="ingresar" />
     </jsp:include>
     <div>
-        <h2>Establece tus reglas, nosotros el alcance ;)</h2>
+        <form class ="box" action="index.jsp" method="post">
+            <h1>Iniciar sesión</h1>
+            <input type="text" name="" placeholder="Correo">
+            <input type="password" name="" placeholder="Contraseña">
+            <input type="submit" name="" value="Login">
+            <div class="buttom-text">
+                ¿No tienes una cuenta? <a href="registrarse.jsp">Registrate</a>
+            </div>
+        </form>
     </div>
 </body>
 </html>
