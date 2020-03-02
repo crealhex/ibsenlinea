@@ -11,7 +11,7 @@
 </head>
 <body>
     <jsp:include page="WEB-INF/partials-dinamic/menu.jsp">
-        <jsp:param name="menu" value="inicio" />
+        <jsp:param name="menu" value="registrarse" />
     </jsp:include>
     <div>
         <form class="boxr" action="index.jsp" method="post">

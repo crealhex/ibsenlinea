@@ -7,6 +7,7 @@ nav {
 
 nav ul {
   margin: 0;
+  padding: 0;
 }
 
 nav ul li {
@@ -20,7 +21,7 @@ nav ul li a {
   padding: 15px;
 }
 
-.seleccionado {
+.selected {
   background-color: white;
   color:black;
 }
