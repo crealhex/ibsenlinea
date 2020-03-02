@@ -4,25 +4,31 @@ import java.time.LocalDate;
 
 public class Service {
     
-    private int id;
+    private int id;				
     private String id_student;
     private String type;
-    private LocalDate start_date;
-    private int amount;
+    private LocalDate started_at;
+    private double amount;
     private int dues;
+    private double pagoxmes;
+    private int duespagados;
+    private double pagado;
+    private int debt;
     private int payday;
 
-    public Service(){
-        
-    }
-    
-    public Service(int id, String id_student, String type, LocalDate start_date, int amount, int dues, int payday) {
+    public Service(){}
+   
+    public Service(int id, String id_student, String type, LocalDate started_at, double amount, int dues, double pagoxmes, int duespagados, double pagado, int debt, int payday) {
         this.id = id;
         this.id_student = id_student;
         this.type = type;
-        this.start_date = start_date;
+        this.started_at = started_at;
         this.amount = amount;
         this.dues = dues;
+        this.pagoxmes = pagoxmes;
+        this.duespagados = duespagados;
+        this.pagado = pagado;
+        this.debt = debt;
         this.payday = payday;
     }
 
@@ -50,19 +56,19 @@ public class Service {
         this.type = type;
     }
 
-    public LocalDate getStart_date() {
-        return start_date;
+    public LocalDate getStarted_at() {
+        return started_at;
     }
 
-    public void setStart_date(LocalDate start_date) {
-        this.start_date = start_date;
+    public void setStarted_at(LocalDate started_at) {
+        this.started_at = started_at;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
@@ -74,6 +80,38 @@ public class Service {
         this.dues = dues;
     }
 
+    public double getPagoxmes() {
+        return pagoxmes;
+    }
+
+    public void setPagoxmes(double pagoxmes) {
+        this.pagoxmes = pagoxmes;
+    }
+
+    public int getDuespagados() {
+        return duespagados;
+    }
+
+    public void setDuespagados(int duespagados) {
+        this.duespagados = duespagados;
+    }
+
+    public double getPagado() {
+        return pagado;
+    }
+
+    public void setPagado(double pagado) {
+        this.pagado = pagado;
+    }
+
+    public int getDebt() {
+        return debt;
+    }
+
+    public void setDebt(int debt) {
+        this.debt = debt;
+    }
+
     public int getPayday() {
         return payday;
     }
@@ -83,6 +121,5 @@ public class Service {
     }
     
          
-    
     
 }

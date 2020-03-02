@@ -34,7 +34,7 @@ create table student_service --solicitar prestamos.jsp
 	id_service int auto_increment,		--id service autogenerado
 	id_student varchar(10) not null, 	--dni
 	type varchar (20) not null,			--tipo de prestamo
-	started_at date not null,			--fecha de cuando se inició el prestamo
+	started_at date not null,			--fecha de cuando se inició el prestamo 
 	amount double not null,				--cantidad total del prestamo
 	dues int not null,					--elija la cantidad de cuotas en que desea pagar
 	pagoxmes double not null,			--la cantidad que se pagara cada mes
@@ -60,7 +60,7 @@ comment 'this table catch all the services taked by one student';
 
 create table service --micuenta/miprestamo.html
 (
-	id int auto_increment, 			--id service fk 
+	id int not null, 				--id service fk 
 	id_student varchar(10) not null,--id student (DNI)
 	type varchar(20) not null, 		--tipo de prestamo
 	started_at date not null, 		--fecha de cuando se inició el prestamo
@@ -79,15 +79,7 @@ create table service --micuenta/miprestamo.html
 	constraint id_student_fk
 		foreign key (id_student) references student (id),
 	constraint type_fk
-		foreign key (type) references student_service (type),
-	constraint started_at_fk
-		foreign key (started_at) references student_service (started_at),
-	constraint amount_fk
-		foreign key (amount) references student_service (amount),
-	constraint dues_fk
-		foreign key (dues) references student_service (dues),
-	constraint pagoxmes_fk
-		foreign key (pagoxmes) references student_service (pagoxmes)
+
 )
 comment 'table for all services';
 
@@ -105,8 +97,7 @@ create table pagado -- pagar.jsp
 		foreign key (id_student) references student (id),
 	constraint id_service_fk
 		foreign key (id_service) references student_service (id_service),
-	constraint pagoxmes_fk
-		foreign key (pagoxmes) references student_service (pagoxmes)
+	
 )
 
 
