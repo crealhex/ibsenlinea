@@ -1,5 +1,12 @@
 nav {
   background-color: #37A8EA;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+nav ul {
+  margin: 0;
 }
 
 nav ul li {
@@ -16,4 +23,92 @@ nav ul li a {
 .seleccionado {
   background-color: white;
   color:black;
+}
+
+/* login.jsp */
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: sans-serif;
+  width: 80%;
+}
+
+.box h1 {
+  position: relative;
+  top: -15px;
+}
+
+.box {
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.box input[type = "text"], .box input[type ="password"] {
+  background: none;
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #222;
+  padding: 10px 10px;
+  width: 200px;
+}
+
+.box input[type = "submit"] {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.buttom-text {
+  font-size: .875em;
+  padding: 8px;
+}
+
+.buttom-text a {
+  text-decoration: none;
+  color: blue;
+}
+
+/* register.jsp */
+
+.boxr h1 {
+  position: relative;
+  top: -15px;
+}
+
+.boxr {
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.boxr input[type = "text"], .boxr input[type ="password"] {
+  background: none;
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #222;
+  padding: 10px 10px;
+  width: 200px;
+}
+
+.boxr input[type = "submit"] {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.buttom-text-r {
+  font-size: .875em;
+  padding: 8px;
+}
+
+.buttom-text-r a {
+  text-decoration: none;
+  color: blue;
 }
