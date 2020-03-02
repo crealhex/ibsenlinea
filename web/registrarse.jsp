@@ -14,14 +14,15 @@
         <jsp:param name="menu" value="registrarse" />
     </jsp:include>
     <div>
-        <form class="boxr" action="index.jsp" method="post">
+        <form class="boxr" action="${pageContext.request.contextPath}/signup" method="post">
             <h1>Registrarse</h1>
-            <input type="text" name="" placeholder="Nombres">
-            <input type="text" name="" placeholder="Correo electrónico">
-            <input type="text" name="" placeholder="DNI">
-            <input type="text" name="" placeholder="Número de celular">
-            <input type="password" name="" placeholder="Ingrese una contraseña">
+            <input type="text" name="dni" placeholder="DNI">
+            <input type="text" name="name" placeholder="Nombres">
+            <input type="text" name="phone" placeholder="Número de celular">
+            <input type="text" name="email" placeholder="Correo electrónico">
+            <input type="password" name="password" placeholder="Ingrese una contraseña">
             <input type="password" name="" placeholder="Repita la contraseña">
+            <input type="number" name="" placeholder="Edad">
             <input type="submit" name="" value="Registrarse">
             <div class="buttom-text-r">
                 ¿Ya tienes una cuenta? <a href="ingresar.jsp">Iniciar sesión</a>

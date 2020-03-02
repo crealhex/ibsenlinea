@@ -3,4 +3,59 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <servlet>
+        <servlet-name>becas</servlet-name>
+        <jsp-file>/becas.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>becas</servlet-name>
+        <url-pattern>/becas</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cuenta</servlet-name>
+        <jsp-file>/cuenta.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cuenta</servlet-name>
+        <url-pattern>/cuenta</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ingresar</servlet-name>
+        <jsp-file>/ingresar.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ingresar</servlet-name>
+        <url-pattern>/ingresar</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>otros</servlet-name>
+        <jsp-file>/otros.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>otros</servlet-name>
+        <url-pattern>/otros</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>prestamos</servlet-name>
+        <jsp-file>/prestamos.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>prestamos</servlet-name>
+        <url-pattern>/prestamos</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>registrarse</servlet-name>
+        <jsp-file>/registrarse.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registrarse</servlet-name>
+        <url-pattern>/registrarse</url-pattern>
+    </servlet-mapping>
+
 </web-app>
