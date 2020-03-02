@@ -7,7 +7,7 @@ public class Service {
     private int id;
     private String idStudent;
     private String type;
-    private Date startedDate;
+    private Date startedAt;
     private float amount;
     private byte dues;
     private byte payday;
@@ -16,11 +16,11 @@ public class Service {
         
     }
 
-    public Service(int id, String idStudent, String type, Date startedDate, float amount, byte dues, byte payday) {
+    public Service(int id, String idStudent, String type, Date startedAt, float amount, byte dues, byte payday) {
         this.id = id;
         this.idStudent = idStudent;
         this.type = type;
-        this.startedDate = startedDate;
+        this.startedAt = startedAt;
         this.amount = amount;
         this.dues = dues;
         this.payday = payday;
@@ -50,12 +50,12 @@ public class Service {
         this.type = type;
     }
 
-    public Date getStartedDate() {
-        return startedDate;
+    public Date getStartedAt() {
+        return startedAt;
     }
 
-    public void setStartedDate(Date startedDate) {
-        this.startedDate = startedDate;
+    public void setStartedAt(Date startedAt) {
+        this.startedAt = startedAt;
     }
 
     public float getAmount() {
@@ -88,7 +88,7 @@ public class Service {
                 "id=" + id +
                 ", idStudent='" + idStudent + '\'' +
                 ", type='" + type + '\'' +
-                ", startedDate=" + startedDate +
+                ", startedDate=" + startedAt +
                 ", amount=" + amount +
                 ", dues=" + dues +
                 ", payday=" + payday +

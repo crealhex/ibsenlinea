@@ -22,47 +22,6 @@ public class ServiceMySQL implements ServiceDAO {
     }
 
     @Override
-    public List<Service> getAll() {
-        // TODO ServiceMySQL().getAll()
-        return null;
-    }
-
-    @Override
-    public List<Service> getAllByStudent(String code) {
-
-        final String GET_ALL_BY_STUDENT = "SELECT id, type, started_at, amount, dues, payday FROM service WHERE id_student = ?";
-
-        List<Service> services = new ArrayList<>();
-        try {
-            conn = new StartMySQL().connect();
-            sentence = conn.prepareStatement(GET_ALL_BY_STUDENT);
-            sentence.setString(1, code);
-            result = sentence.executeQuery();
-
-            while (result.next()) {
-                Service service = new Service();
-
-                service.setId(result.getInt("id"));
-                service.setIdStudent(code);
-                service.setType(result.getString("type"));
-                service.setStartedDate(result.getDate("started_at"));
-                service.setAmount(result.getFloat("amount"));
-                service.setDues(result.getByte("dues"));
-                service.setPayday(result.getByte("payday"));
-
-                services.add(service);
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-
-        } finally {
-            close();
-        }
-        return services;
-    }
-
-    @Override
     public void update(Service service) {
 
         final String UPDATE = "UPDATE service SET amount = ?, dues = ? WHERE id = ?";
@@ -109,9 +68,75 @@ public class ServiceMySQL implements ServiceDAO {
     }
 
     @Override
-    public Service getById(Integer integer) {
-        // TODO ServiceMySQL().getById()
+    public List<Service> getAll() {
+        // TODO ServiceMySQL().getAll()
         return null;
+    }
+
+    public List<Service> getAllByStudent(String code) {
+
+        final String GET_ALL_BY_STUDENT = "SELECT id, type, started_at, amount, dues, payday FROM service WHERE id_student = ?";
+
+        List<Service> services = new ArrayList<>();
+        try {
+            conn = new StartMySQL().connect();
+            sentence = conn.prepareStatement(GET_ALL_BY_STUDENT);
+            sentence.setString(1, code);
+            result = sentence.executeQuery();
+
+            while (result.next()) {
+                Service service = new Service();
+
+                service.setId(result.getInt("id"));
+                service.setIdStudent(code);
+                service.setType(result.getString("type"));
+                service.setStartedAt(result.getDate("started_at"));
+                service.setAmount(result.getFloat("amount"));
+                service.setDues(result.getByte("dues"));
+                service.setPayday(result.getByte("payday"));
+
+                services.add(service);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        } finally {
+            close();
+        }
+        return services;
+    }
+
+    @Override
+    public Service getById(Integer code) {
+
+        final String GET_BY_ID = "SELECT id_student, type, started_at, amount, dues, payday FROM service WHERE id = ?";
+
+        Service service = null;
+        try {
+            conn = new StartMySQL().connect();
+            sentence = conn.prepareStatement(GET_BY_ID);
+            sentence.setInt(1, code);
+            result = sentence.executeQuery();
+
+            if (result.next()) {
+                service = new Service();
+                service.setId(code);
+                service.setIdStudent(result.getString("id_student"));
+                service.setType(result.getString("type"));
+                service.setStartedAt(result.getDate("started_at"));
+                service.setAmount(result.getFloat("amount"));
+                service.setDues(result.getByte("dues"));
+                service.setPayday(result.getByte("payday"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        } finally {
+            close();
+        }
+        return service;
     }
 
     private void close() {

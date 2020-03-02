@@ -10,7 +10,7 @@ public class StartPSQL {
 
         Connection conn;
         final String URL = "jdbc:postgresql://localhost/db_ibsenlinea";
-        conn = DriverManager.getConnection(URL, "postgres", "3230184");
+        conn = DriverManager.getConnection(URL, "", "");
 
         return conn;
 

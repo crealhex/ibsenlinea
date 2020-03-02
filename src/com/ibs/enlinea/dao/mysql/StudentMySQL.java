@@ -49,35 +49,6 @@ public class StudentMySQL implements StudentDAO {
     }
 
     @Override
-    public List<Student> getAll() {
-        List<Student> students = new ArrayList<>();
-        try {
-            conn = new StartMySQL().connect();
-            sentence = conn.prepareStatement(GET_ALL);
-            result = sentence.executeQuery();
-
-            while (result.next()) {
-                Student student = new Student();
-
-                student.setId(result.getString("id"));
-                student.setName(result.getString("name"));
-                student.setNumber(result.getString("number"));
-                student.setEmail(result.getString("email"));
-                student.setAge(result.getByte("age"));
-
-                students.add(student);
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-
-        } finally {
-            close();
-        }
-        return students;
-    }
-
-    @Override
     public void update(Student student) {
         try {
             conn = new StartMySQL().connect();
@@ -122,6 +93,35 @@ public class StudentMySQL implements StudentDAO {
     }
 
     @Override
+    public List<Student> getAll() {
+        List<Student> students = new ArrayList<>();
+        try {
+            conn = new StartMySQL().connect();
+            sentence = conn.prepareStatement(GET_ALL);
+            result = sentence.executeQuery();
+
+            while (result.next()) {
+                Student student = new Student();
+
+                student.setId(result.getString("id"));
+                student.setName(result.getString("name"));
+                student.setNumber(result.getString("number"));
+                student.setEmail(result.getString("email"));
+                student.setAge(result.getByte("age"));
+
+                students.add(student);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        } finally {
+            close();
+        }
+        return students;
+    }
+
+    @Override
     public Student getById(String index) {
         Student student = null;
         try {
@@ -145,7 +145,6 @@ public class StudentMySQL implements StudentDAO {
         } finally {
             close();
         }
-
         return student;
     }
 
