@@ -60,9 +60,9 @@ create table payment
 -- INSERTING DATA
 
 INSERT INTO student (id, name, number, email, password, age)
-VALUES ('73822427', 'Luis Enco', '+51 995 807 789', 'encoluis@hotmail.com', md5('3230184'), 21);
+VALUES ('73822427', 'Luis Enco', '+51 995 807 789', 'encoluis@hotmail.com', '3230184', 21);
 INSERT INTO student (id, name, number, email, password, age)
-VALUES ('73835643', 'Ariana Candiotti', '+51 995 807 521', 'arianacand@hotmail.com', md5('arianafellow'), 16);
+VALUES ('73835643', 'Ariana Candiotti', '+51 995 807 521', 'arianacand@hotmail.com', 'arianafellow', 16);
 
 INSERT INTO service (id_student, type, started_at, amount, dues, payday)
 VALUES ('73822427', 'préstamo', '2020-02-10', 1000, 12, 10);

@@ -12,11 +12,9 @@ import java.util.List;
 
 public class StudentMySQL implements StudentDAO {
 
-    private final String INSERT = "INSERT INTO student (id, name, number, email, password, age) VALUES (?, ?, ?, ?, md5(?), ?)";
-    private final String UPDATE = "UPDATE student SET name = ?, number = ?, email = ?, password = md5(?), age = ? WHERE id = ?";
+    private final String UPDATE = "UPDATE student SET name = ?, number = ?, email = ?, password = ?, age = ? WHERE id = ?";
     private final String DELETE = "DELETE FROM student WHERE id = ?";
 
-    private final String GET_BY_ID = "SELECT id, name, number, email, age FROM student WHERE id = ?";
     private final String GET_ALL = "SELECT id, name, number, email, age FROM student";
 
     private Connection conn;
@@ -24,10 +22,14 @@ public class StudentMySQL implements StudentDAO {
     private ResultSet result;
 
     @Override
-    public void create(Student student) {
+    public void create(Student student) throws SQLException {
+
+        String CREATE = "INSERT INTO student (id, name, number, email, password, age) VALUES (?, ?, ?, ?, ?, ?)";
+        System.out.println(student);
+
         try {
             conn = new StartMySQL().connect();
-            sentence = conn.prepareStatement(INSERT);
+            sentence = conn.prepareStatement(CREATE);
 
             sentence.setString(1, student.getId());
             sentence.setString(2, student.getName());
@@ -41,6 +43,7 @@ public class StudentMySQL implements StudentDAO {
             }
 
         } catch (SQLException e) {
+            System.out.println(e.getMessage());
             e.printStackTrace();
 
         } finally {
@@ -122,12 +125,15 @@ public class StudentMySQL implements StudentDAO {
     }
 
     @Override
-    public Student getById(String index) {
+    public Student getById(String code) {
+
+        String GET_BY_ID = "SELECT id, name, number, email, age FROM student WHERE id = ?";
+
         Student student = null;
         try {
             conn = new StartMySQL().connect();
             sentence = conn.prepareStatement(GET_BY_ID);
-            sentence.setString(1, index);
+            sentence.setString(1, code);
             result = sentence.executeQuery();
 
             if (result.next()) {
@@ -137,6 +143,37 @@ public class StudentMySQL implements StudentDAO {
                 student.setNumber(result.getString("number"));
                 student.setEmail(result.getString("email"));
                 student.setAge(result.getByte("age"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        } finally {
+            close();
+        }
+        return student;
+    }
+
+    @Override
+    public Student getByEmail(String email) {
+
+        String GET_BY_ID = "SELECT id, email, password FROM student WHERE email = ?";
+
+        Student student = null;
+        try {
+            conn = new StartMySQL().connect();
+            sentence = conn.prepareStatement(GET_BY_ID);
+            sentence.setString(1, email);
+            result = sentence.executeQuery();
+
+            if (result.next()) {
+                student = new Student();
+                student.setId(result.getString("id"));
+//                student.setName(result.getString("name"));
+//                student.setNumber(result.getString("number"));
+                student.setEmail(result.getString("email"));
+                student.setPassword(result.getString("password"));
+//                student.setAge(result.getByte("age"));
             }
 
         } catch (SQLException e) {

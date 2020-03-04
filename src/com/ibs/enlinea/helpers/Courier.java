@@ -1,4 +1,4 @@
-package com.ibs.enlinea.Helper;
+package com.ibs.enlinea.helpers;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;

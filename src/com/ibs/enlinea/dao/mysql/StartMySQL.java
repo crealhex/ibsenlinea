@@ -16,6 +16,7 @@ public class StartMySQL {
             conn = DriverManager.getConnection(URL, "root", "");
 
         } catch (ClassNotFoundException e) {
+            System.out.println(e.getMessage());
             e.printStackTrace();
         }
         return conn;

@@ -1,3 +1,9 @@
+<%
+    String idStudent = (String)session.getAttribute("id_student");
+    if (idStudent == null) {
+        response.sendRedirect(request.getContextPath() + "/registrarse");
+    }
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!doctype html>
 <html lang="es">
@@ -42,7 +48,7 @@
     </jsp:include>
     <div>
         <form class="box-mc" action="index.jsp" method="post">
-            <h1>Username</h1>
+            <h1>Mi cuenta</h1>
             <div class="buttom-text-mc">
                 <a href="#">Configuración</a>
                 <div class="right">

@@ -1,3 +1,9 @@
+<%
+    String idStudent = (String)session.getAttribute("id_student");
+    if (idStudent != null) {
+        response.sendRedirect(request.getContextPath() + "/cuenta");
+    }
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="es">
@@ -21,9 +27,9 @@
             <input type="text" name="phone" placeholder="Número de celular">
             <input type="text" name="email" placeholder="Correo electrónico">
             <input type="password" name="password" placeholder="Ingrese una contraseña">
-            <input type="password" name="" placeholder="Repita la contraseña">
-            <input type="number" name="" placeholder="Edad">
-            <input type="submit" name="" value="Registrarse">
+            <input type="password" name="notary" placeholder="Repita la contraseña">
+            <input type="number" name="age" placeholder="Edad">
+            <button>Registrarse</button>
             <div class="buttom-text-r">
                 ¿Ya tienes una cuenta? <a href="ingresar.jsp">Iniciar sesión</a>
             </div>

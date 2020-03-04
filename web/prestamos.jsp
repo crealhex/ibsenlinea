@@ -1,9 +1,15 @@
-<%--
-    Document   : Prestamos
-    Created on : 27/02/2020, 04:48:15 PM
-    Author     : dolly
---%>
-
+<%@ page import="com.ibs.enlinea.dao.interfaces.StudentDAO" %>
+<%@ page import="com.ibs.enlinea.dao.mysql.StudentMySQL" %>
+<%@ page import="com.ibs.enlinea.models.Student" %>
+<%@ page import="com.ibs.enlinea.models.Service" %>
+<%@ page import="com.ibs.enlinea.dao.mysql.ServiceMySQL" %>
+<%@ page import="java.util.List" %>
+<%
+    String idStudent = (String)session.getAttribute("id_student");
+    if (idStudent == null) {
+//        response.sendRedirect(request.getContextPath() + "/cuenta");
+    }
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="es">
@@ -21,6 +27,11 @@
         <jsp:param name="menu" value="prestamos" />
     </jsp:include>
 
+    <%
+        Student student = new StudentMySQL().getById(idStudent);
+        List<Service> services = new ServiceMySQL().getAllByStudent(idStudent);
+    %>
+
     <table border="1" cellpadding="10">
         <thead>
             <tr>
@@ -36,18 +47,20 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>73822427</td>
-                <td>Luis Enco</td>
-                <td>Préstamo</td>
-                <td>15/08/2017</td>
-                <td>300 PEN</td>
-                <td>200 PEN</td>
-                <td>3</td>
-                <td>100 PEN</td>
-                <td>30</td>
-                <td><a href="/ibsenlinea/web/pagar.html">Realizar pago</a></td>
-            </tr>
+            <% for (Service service : services) { %>
+                <tr>
+                    <td><%= student.getId() %></td>
+                    <td><%= student.getName() %></td>
+                    <td><%= service.getType() %></td>
+                    <td><%= service.getStartedAt() %></td>
+                    <td><%= service.getAmount() %></td>
+                    <td>300 PEN</td>
+                    <td><%= service.getDues() %></td>
+                    <td><%= service.getAmount() / service.getDues() %></td>
+                    <td><%= service.getPayday() %></td>
+                    <td><a href="${pageContext.request.contextPath}/pagar?id=<%= service.getId() %>">Realizar pago</a></td>
+                </tr>
+            <% } %>
         </tbody>
     </table>
 </body>

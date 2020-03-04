@@ -1,3 +1,9 @@
+<%
+    String idStudent = (String)session.getAttribute("id_student");
+    if (idStudent != null) {
+        response.sendRedirect(request.getContextPath() + "/cuenta");
+    }
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="es">
@@ -14,11 +20,18 @@
         <jsp:param name="menu" value="ingresar" />
     </jsp:include>
     <div>
-        <form class ="box" action="index.jsp" method="post">
+        <form class ="box" action="${pageContext.request.contextPath}/login" method="post">
             <h1>Iniciar sesión</h1>
-            <input type="text" name="" placeholder="Correo">
-            <input type="password" name="" placeholder="Contraseña">
-            <input type="submit" name="" value="Login">
+            <div style="color: #ff476e" class="buttom-text">
+                <%
+                    if (request.getAttribute("state") != null) {
+                        out.print("El correo o contraseña son incorrectos");
+                    }
+                %>
+            </div>
+            <input type="text" name="email" placeholder="Correo">
+            <input type="password" name="password" placeholder="Contraseña">
+            <button>Iniciar sesión</button>
             <div class="buttom-text">
                 ¿No tienes una cuenta? <a href="registrarse.jsp">Registrate</a>
             </div>
