@@ -93,10 +93,10 @@ create table pagado -- pagar.jsp
 
 	constraint id_pago_pk
 		primary key (id_pago),
-	constraint id_student_fk
+	constraint id_student___fk
 		foreign key (id_student) references student (id),
 	constraint id_service_fk
-		foreign key (id_service) references student_service (id_service),
+		foreign key (id_service) references student_service (id_service)
 	
 )
 

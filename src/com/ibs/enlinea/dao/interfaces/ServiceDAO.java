@@ -1,5 +1,7 @@
 package com.ibs.enlinea.dao.interfaces;
 
-public interface ServiceDAO extends DAO<Integer, Object> {
+import com.ibs.enlinea.models.Service;
+
+public interface ServiceDAO extends DAO<Integer, Service> {
 
 }

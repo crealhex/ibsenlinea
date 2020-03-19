@@ -13,6 +13,26 @@ nav ul li a {
   padding: 15px;
 }
 
+/* menus login|register */
+
+nav ul li .login{
+  margin-left: 930px;
+ 
+}
+nav ul li .login, nav ul li .espacio, nav ul li .register{
+    font-size: 13px;
+    padding: 0px;
+}
+
+.loginm{
+    display: none;
+}
+#cerrar{
+  position: absolute;
+  text-align: center;
+  top:30%;
+  right: 37%;
+}
 .seleccionado {
   background-color: white;
   color: black;
@@ -38,6 +58,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  background-color: greenyellow;
 }
 
 .box input[type = "text"], .box input[type ="password"] {
@@ -110,3 +131,11 @@ body {
   text-decoration: none;
   color: blue;
 }
+
+/* prestamos.jsp */
+
+.boxp a {
+    text-decoration: none;
+    color: green;
+}
+

@@ -10,9 +10,9 @@ public class StartMySQL {
 
         Connection conn = null;
         final String URL = "jdbc:mysql://localhost/db_ibsenlinea";
-
+    
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(URL, "root", "");
 
         } catch (ClassNotFoundException e) {
@@ -20,5 +20,5 @@ public class StartMySQL {
         }
         return conn;
     }
-
-}
+    
+}  

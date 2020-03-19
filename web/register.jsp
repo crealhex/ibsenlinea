@@ -17,15 +17,16 @@
 </head>
 <body>
     <div>
-        <form class="boxr" action="index.jsp" method="post">
+        <form class="boxr" action="ServletRegister" method="post">
             <h1>Registrarse</h1>
-            <input type="text" name="" placeholder="Nombres y apellidos">
-            <input type="text" name="" placeholder="Correo electronico">
-            <input type="text" name="" placeholder="DNI">
-            <input type="text" name="" placeholder="Numero de celular">
-            <input type="password" name="" placeholder="Ingrese una contraseña">
-            <input type="password" name="" placeholder="Repita la contraseña">
-            <input type="submit" name="" value="Registrarse">
+            <input type="text" name="name" placeholder="Nombres y apellidos">
+            <input type="text" name="email" placeholder="Correo electronico">
+            <input type="text" name="id" placeholder="DNI">
+            <input type="text" name="number" placeholder="Numero de celular">
+            <input type="text" name="age" placeholder="Edad">
+            <input type="password" name="password" placeholder="Ingrese una contraseña">
+            <input type="password" name="password" placeholder="Repita la contraseña">
+            <input type="submit" name="register" value="Registrarse">
             <div class="buttom-text-r">
                 ¿Ya tienes una cuenta? <a href="login.jsp">Iniciar sesión</a>
             </div>

@@ -13,7 +13,7 @@ import java.util.List;
 public class StudentMySQL implements StudentDAO {
 
     private final String INSERT = "INSERT INTO student (id, name, number, email, password, age) VALUES (?, ?, ?, ?, md5(?), ?)";
-    private final String UPDATE = "UPDATE student SET name = ?, number = ?, email = ?, password = md5(?), age = ? WHERE id = ?";
+    private final String UPDATE = "UPDATE student SET number = ?, email = ?, password = md5(?) WHERE id = ?";
     private final String DELETE = "DELETE FROM student WHERE id = ?";
 
     private final String GET_BY_ID = "SELECT id, name, number, email, age FROM student WHERE id = ?";
