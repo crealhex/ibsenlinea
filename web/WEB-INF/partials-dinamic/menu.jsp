@@ -1,3 +1,4 @@
+<%--@elvariable id="loginState" type="com"--%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     String menu = request.getParameter("menu");
@@ -14,11 +15,12 @@
         <li><a href="${pageContext.request.contextPath}/#" class="espacio">|</a></li>
         <li><a href="javascript:abrirReg()" class="register">Registrarse</a></li>
     </ul>
-</nav>  
+</nav>
     <div class="loginm" id="log">
         <div id="cerrarl"><a href="javascript:cerrarLog()"><img src="img/cerrar.png"></a></div>
         <form class ="box" action="ServletLogin" method="post">
             <h1>Iniciar sesión</h1>
+            <input id="loginState" type="hidden" value="${loginState}">
             <input type="text" name="correo" placeholder="Correo">
             <input type="password" name="pass" placeholder="Contraseña">
             <input type="submit" name="login" value="Login">
@@ -48,6 +50,13 @@
     <nav></nav>
     <footer></footer>
     <script>
+        window.onload = function() {
+            let loginState = document.getElementById("loginState").value;
+            if (loginState) {
+                abrirLog();
+            }
+        };
+
         function abrirLog(){
             document.getElementById("log").style.display="block";
             cerrarReg();
@@ -64,4 +73,5 @@
             document.getElementById("reg").style.display="none";
         }
     </script>
-    
+
+<a href="${pageContext.request.contextPath}/otros.jspjavascript:cerrarLog()"></a>
