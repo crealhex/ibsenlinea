@@ -16,30 +16,31 @@
     </ul>
 </nav>  
     <div class="loginm" id="log">
-        <div id="cerrar"><a href="javascript:cerrarLog()"><img src="img/cerrar.png"></a></div>
+        <div id="cerrarl"><a href="javascript:cerrarLog()"><img src="img/cerrar.png"></a></div>
         <form class ="box" action="ServletLogin" method="post">
-            <h1>Iniciar sesi�n</h1>
+            <h1>Iniciar sesión</h1>
             <input type="text" name="correo" placeholder="Correo">
-            <input type="password" name="pass" placeholder="Contrase�a">
+            <input type="password" name="pass" placeholder="Contraseña">
             <input type="submit" name="login" value="Login">
             <div class="buttom-text">
-                �No tienes una cuenta? <a href="register.jsp">Reg�strate</a>
+                ¿No tienes una cuenta? <a href="register.jsp">Registrate</a>
             </div>
         </form>
     </div>
     <div class="loginm" id="reg">
-        <div id="cerrar"><a href="javascript:cerrarReg()"><img src="img/cerrar.png"></a></div>
-        <form class ="box" action="ServletLogin" method="post">
+        <div id="cerrarr"><a href="javascript:cerrarReg()"><img src="img/cerrar.png"></a></div>
+        <form class ="box" action="ServletRegister" method="post">
             <h1>Registrarse</h1>
-            <input type="number" name="dni" placeholder="DNI">
-            <input type="text" name="name" placeholder="Nombre">
-            <input type="text" name="number" value="Teléfono Móvil">
-            <input type="email" name="email" value="Correo">
-            <input type="password" name="password" value="Contraseña">
-            <input type="number" name="age" value="Age">
-            <input type="submit" name="login" value="Login">
-            <div class="buttom-text">
-                ¿Ya tienes una cuenta? <a href="login.jsp">Loguístrate</a>
+            <input type="text" name="name" placeholder="Nombres y apellidos">
+            <input type="text" name="email" placeholder="Correo electronico">
+            <input type="text" name="id" placeholder="DNI">
+            <input type="text" name="number" placeholder="Numero de celular">
+            <input type="text" name="age" placeholder="Edad">
+            <input type="password" name="password" placeholder="Ingrese una contraseña">
+            <input type="password" name="password" placeholder="Repita la contraseña">
+            <input type="submit" name="register" value="Registrarse">
+            <div class="buttom-text-r">
+                ¿Ya tienes una cuenta? <a href="login.jsp">Iniciar sesión</a>
             </div>
         </form>
     </div>

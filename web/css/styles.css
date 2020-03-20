@@ -28,11 +28,17 @@ nav ul li .login, nav ul li .espacio, nav ul li .register{
     display: none;
 }
 
-#cerrar {
+#cerrarl {
   position: absolute;
-  text-align: center;
-  top:34%;
-  right: 41%;
+  top: 27%;
+  right: 37.8%;
+  z-index: 99;
+}
+
+#cerrarr{
+  position: absolute;
+  top: 7%;
+  right: 37.8%;
   z-index: 99;
 }
 
@@ -46,7 +52,7 @@ body {
   margin: 0 auto;
   padding: 0;
   font-family: sans-serif;
-  width: 80%;
+  width: 100%;
 }
 
 .box h1 {
@@ -96,15 +102,7 @@ body {
   top: -15px;
 }
 
-.boxr {
-  width: 300px;
-  padding: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+
 
 .boxr input[type = "text"], .boxr input[type ="password"] {
   background: none;
