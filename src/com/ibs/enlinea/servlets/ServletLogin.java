@@ -35,13 +35,20 @@ public class ServletLogin extends HttpServlet {
         
         String correo = request.getParameter("correo");
         String password = request.getParameter("pass");
-        
-        consulta co = new consulta();
-        if (co.autenticacion(correo, password)){
+
+        if (correo.equals("123") && password.equals("123")) {
             response.sendRedirect("index.jsp");
-        }else{
-            response.sendRedirect("login.jsp");
+        } else {
+            request.setAttribute("loginState", false);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         }
+        
+//        consulta co = new consulta();
+//        if (co.autenticacion(correo, password)){
+//            response.sendRedirect("index.jsp");
+//        }else{
+//            response.sendRedirect("login.jsp");
+//        }
         
        
     }
