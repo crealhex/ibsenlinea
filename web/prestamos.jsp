@@ -25,6 +25,6 @@
             <div class="boxp">
             <a href="solicitarprestamo.jsp">Solicitar prestamo</a>
             </div>
-        
+
     </body>
 </html>

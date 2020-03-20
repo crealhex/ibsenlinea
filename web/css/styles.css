@@ -27,12 +27,15 @@ nav ul li .login, nav ul li .espacio, nav ul li .register{
 .loginm{
     display: none;
 }
-#cerrar{
+
+#cerrar {
   position: absolute;
   text-align: center;
-  top:30%;
-  right: 37%;
+  top:34%;
+  right: 41%;
+  z-index: 99;
 }
+
 .seleccionado {
   background-color: white;
   color: black;
@@ -40,9 +43,10 @@ nav ul li .login, nav ul li .espacio, nav ul li .register{
 
 /* login.jsp */
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: sans-serif;
+  width: 80%;
 }
 
 .box h1 {
@@ -86,12 +90,6 @@ body {
 }
 
 /* register.jsp */
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
 
 .boxr h1 {
   position: relative;

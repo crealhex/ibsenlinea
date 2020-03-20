@@ -24,29 +24,7 @@
 
     <div>
         <h2>Establece tus reglas, nosotros el alcance ;)</h2>
-        <p>loren asaxsamsxaxax loren asaxsamsxaxax loren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        vloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
-        
-        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, delectus deserunt ea eaque eos ipsa minus praesentium reiciendis. Accusamus corporis earum facere in laboriosam nesciunt quo sed ut. Ab, aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur aut ea eos facilis fugit impedit itaque laborum molestiae nesciunt, non, officiis qui quisquam quos reprehenderit repudiandae rerum sapiente suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa excepturi iste maiores molestias placeat, possimus quae quas quos reiciendis sequi sunt tempora vel. Consequatur cumque deleniti et laboriosam reprehenderit voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae blanditiis culpa deleniti doloremque ea eveniet excepturi exercitationem hic id maxime non, perspiciatis quasi quibusdam repellendus, sint, unde veniam vitae voluptatem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolor eius inventore iusto magni nihil odit pariatur possimus, quis quo similique unde? Ad aperiam esse est illum impedit inventore magni. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium adipisci animi aut autem culpa cum deserunt doloribus laudantium maiores nulla, officia optio provident quae reiciendis repudiandae sequi ut voluptates? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam, architecto atque deserunt eum hic, incidunt natus nesciunt perferendis qui quia sit. Ad delectus, eos facere ipsa nihil repellendus sapiente.</p>
     </div>
     
 </body>
