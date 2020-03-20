@@ -14,6 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IBS-PE</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    
 </head>
 <body>
    
@@ -23,6 +24,30 @@
 
     <div>
         <h2>Establece tus reglas, nosotros el alcance ;)</h2>
+        <p>loren asaxsamsxaxax loren asaxsamsxaxax loren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        vloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        loren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxaxloren asaxsamsxaxax
+        
+        </p>
     </div>
+    
 </body>
 </html>

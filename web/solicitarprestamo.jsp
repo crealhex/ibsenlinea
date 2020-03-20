@@ -1,6 +1,6 @@
 <%--
-    Document   : Prestamos
-    Created on : 27/02/2020, 04:48:15 PM
+    Document   : solicitarprestamo
+    Created on : 16/03/2020, 09:59:44 PM
     Author     : dolly
 --%>
 
@@ -17,61 +17,3 @@
 </head>
 <body>
 
-    <jsp:include page="WEB-INF/partials-dinamic/menu.jsp">
-        <jsp:param name="menu" value="prestamos" />
-    </jsp:include>
-
-    <h2>Solicitar Préstamo</h2>
-    <form action="">
-        <label>
-            Inserte DNI
-            <br>
-            <input type="text">
-        </label>
-        <br><br>
-        <label>
-            Tipo de préstamo
-            <br>
-            <input type="text">
-        </label>
-        <br><br>
-        <label>
-            Monto a solicitar
-            <br>
-            <input type="text">
-        </label>
-        <br><br>
-        <label>
-            Cuotas
-            <br>
-            <input type="text">
-        </label>
-        <br><br>
-        <label>
-            Pago por mes
-            <br>
-            <input type="text">
-        </label>
-        <br><br>
-        <label>
-            Número de tarjeta
-            <br>
-            <input type="text">
-        </label>
-        <br><br>
-        <label>
-            Fecha de tarjeta
-            <br>
-            <input type="text">
-        </label>
-        <br><br>
-        <label>
-            Código de seguridad
-            <br>
-            <input type="text">
-        </label>
-        <br><br>
-        <button>Solicitar</button>
-    </form>
-</body>
-</html>

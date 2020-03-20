@@ -16,16 +16,6 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
 </head>
 <body>
-    <div>
-        <form class ="box" action="index.jsp" method="post">
-            <h1>Iniciar sesión</h1>
-            <input type="text" name="" placeholder="Correo">
-            <input type="password" name="" placeholder="Contraseña">
-            <input type="submit" name="" value="Login">
-            <div class="buttom-text">
-                ¿No tienes una cuenta? <a href="register.jsp">Registrate</a>
-            </div>
-        </form>
-    </div>
+    
 </body>
 </html>

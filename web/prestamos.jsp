@@ -7,21 +7,24 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>IBS-PE</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>IBS-PE</title>
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    </head>
+    <body>
 
-    <jsp:include page="WEB-INF/partials-dinamic/menu.jsp">
-        <jsp:param name="menu" value="prestamos" />
-    </jsp:include>
+        <jsp:include page="WEB-INF/partials-dinamic/menu.jsp">
+            <jsp:param name="menu" value="prestamos" />
+        </jsp:include>
 
-    <h2>Requisitios para obtener un prestamo</h2>
-    <a href="${pageContext.request.contextPath}/solicitarprestamo.jsp">Solicitar prestamo</a>
-</body>
+            <h2>Requisitios para obtener un prestamo</h2>
+            <div class="boxp">
+            <a href="solicitarprestamo.jsp">Solicitar prestamo</a>
+            </div>
+
+    </body>
 </html>
