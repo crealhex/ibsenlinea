@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     String menu = request.getParameter("menu");
 %>
@@ -9,20 +10,36 @@
         <li><a href="${pageContext.request.contextPath}/prestamos.jsp" class="icon-coin-dollar <% out.print(menu.equals("prestamos") ? "seleccionado" : ""); %>"> Prestamos</a></li>
         <li><a href="${pageContext.request.contextPath}/becas.jsp" class="icon-briefcase <% out.print(menu.equals("becas") ? "seleccionado" : ""); %>"> Becass</a></li>
         <li><a href="${pageContext.request.contextPath}/otros.jsp" class="icon-forward <% out.print(menu.equals("otros") ? "seleccionado" : ""); %>"> Otros</a></li>
-        <li><section id ="contenedor"><a href="javascript:abrir()" id="show-login" class="login">Logearse</a></section></li>
+        <li><section id ="contenedor"><a href="javascript:abrirLog()" id="show-login" class="login">Logearse</a></section></li>
         <li><a href="${pageContext.request.contextPath}/#" class="espacio">|</a></li>
-        <li><a href="${pageContext.request.contextPath}/#" class="register">Registrarse</a></li>   
+        <li><a href="javascript:abrirReg()" class="register">Registrarse</a></li>
     </ul>
 </nav>  
     <div class="loginm" id="log">
-        <div id="cerrar"><a href="javascript:cerrar()"><img src="img/cerrar.png"></a></div>
+        <div id="cerrar"><a href="javascript:cerrarLog()"><img src="img/cerrar.png"></a></div>
         <form class ="box" action="ServletLogin" method="post">
-            <h1>Iniciar sesión</h1>
+            <h1>Iniciar sesiï¿½n</h1>
             <input type="text" name="correo" placeholder="Correo">
-            <input type="password" name="pass" placeholder="Contraseña">
+            <input type="password" name="pass" placeholder="Contraseï¿½a">
             <input type="submit" name="login" value="Login">
             <div class="buttom-text">
-                ¿No tienes una cuenta? <a href="register.jsp">Registrate</a>
+                ï¿½No tienes una cuenta? <a href="register.jsp">Regï¿½strate</a>
+            </div>
+        </form>
+    </div>
+    <div class="loginm" id="reg">
+        <div id="cerrar"><a href="javascript:cerrarReg()"><img src="img/cerrar.png"></a></div>
+        <form class ="box" action="ServletLogin" method="post">
+            <h1>Registrarse</h1>
+            <input type="number" name="dni" placeholder="DNI">
+            <input type="text" name="name" placeholder="Nombre">
+            <input type="text" name="number" value="TelÃ©fono MÃ³vil">
+            <input type="email" name="email" value="Correo">
+            <input type="password" name="password" value="ContraseÃ±a">
+            <input type="number" name="age" value="Age">
+            <input type="submit" name="login" value="Login">
+            <div class="buttom-text">
+                Â¿Ya tienes una cuenta? <a href="login.jsp">LoguÃ­strate</a>
             </div>
         </form>
     </div>
@@ -30,11 +47,20 @@
     <nav></nav>
     <footer></footer>
     <script>
-        function abrir(){
+        function abrirLog(){
             document.getElementById("log").style.display="block";
+            cerrarReg();
         }
-        function cerrar(){
+        function cerrarLog(){
             document.getElementById("log").style.display="none";
+        }
+
+        function abrirReg(){
+            document.getElementById("reg").style.display="block";
+            cerrarLog();
+        }
+        function cerrarReg(){
+            document.getElementById("reg").style.display="none";
         }
     </script>
     

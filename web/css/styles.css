@@ -27,12 +27,15 @@ nav ul li .login, nav ul li .espacio, nav ul li .register{
 .loginm{
     display: none;
 }
-#cerrar{
+
+#cerrar {
   position: absolute;
   text-align: center;
-  top:30%;
-  right: 37%;
+  top:34%;
+  right: 41%;
+  z-index: 99;
 }
+
 .seleccionado {
   background-color: white;
   color: black;
