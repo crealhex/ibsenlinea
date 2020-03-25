@@ -3,7 +3,6 @@
     Created on : 27/02/2020, 04:48:15 PM
     Author     : dolly
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="es">
@@ -23,7 +22,7 @@
 
             <h2>Requisitios para obtener un prestamo</h2>
             <div class="boxp">
-            <a href="javascript:abrirLog()">Solicitar prestamo</a>
+                <a href="javascript:abrirLog('prestamos.jsp', 'solicitarprestamo.jsp')">Solicitar prestamo</a>
             </div>
 
     </body>
