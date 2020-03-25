@@ -16,7 +16,7 @@ nav ul li a {
 /* menus login|register */
 
 nav ul li .login{
-  margin-left: 930px;
+  margin-left: 928px;
  
 }
 nav ul li .login, nav ul li .espacio, nav ul li .register{
@@ -69,6 +69,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   background-color: greenyellow;
+  z-index: 4;
 }
 
 .box input[type = "text"], .box input[type ="password"] {
@@ -135,3 +136,266 @@ body {
     color: green;
 }
 
+/* solicitarprestamo.jsp*/
+
+.prestamo{
+    margin: auto;
+    width: 90%;
+}
+
+
+#prestamo{
+  overflow: hidden;
+}
+
+#left{
+    float: left;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    width: 40%;
+/*    background-color: black;*/
+    margin-left: 5%;
+}
+
+.txt{
+  width: 96.5%;
+  position: absolute;
+  transition: all 0.3s;
+  transform: scale(1);
+  opacity: 0;
+  margin-top: 1.5%;
+  z-index: 1;
+}
+
+.txt h2{
+  color: #FFF;
+  text-align: center;
+  font-weight: bold;
+}
+
+.txt p{
+  color: #FFF;
+  padding: 5px 5px;
+  text-align: justify;
+  font-weight: bold;
+  
+}
+
+/*------------------------------------------------------*/
+#left::before {
+  display: flex;
+  content: "";
+  position: absolute;
+  width: 95%;
+  margin-left: 2%;
+  margin-top: 2%;
+  height: 6px;
+  background: #FFF;
+  transition: all 0.2s;
+  z-index: 2;
+ }
+
+ #left::after {
+  display: flex;
+  content: "";
+  position: absolute;
+  width: 95%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  height: 6px;
+  background: #FFF;
+  transition: all 0.2s;
+  z-index: 2;
+ }
+ 
+ #left::before{left: -101%; top: 1%;}
+ #left::after{left: 101%; bottom:1%;}
+ 
+ #left:hover::before{
+  left: 3px;
+ }
+ #left:hover::after{
+  left: 3px;
+ }
+ 
+ #left:hover .txt{
+  transform: scale(1);
+  opacity: 1;
+ }
+
+#right{
+    float: right;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    width: 40%;
+    margin-right: 5%;
+}
+
+.txt2{
+  width: 96.5%;
+  position: absolute;
+  transition: all 0.3s;
+  transform: scale(1);
+  opacity: 0;
+  margin-top: 1.5%;
+  z-index: 1;
+}
+
+.txt2 h2{
+  color: #FFF;
+  text-align: center;
+  font-weight: bold;
+}
+.txt2 p{
+  color: #FFF;
+  padding: 5px 5px;
+  text-align: justify;
+  font-weight: bold;
+}
+
+#right::before {
+  display: flex;
+  content: "";
+  position: absolute;
+  width: 95%;
+  margin-left: 2%;
+  margin-top: 2%;
+  height: 6px;
+  background: #FFF;
+  transition: all 0.2s;
+  z-index: 2;
+ }
+
+ #right::after {
+  display: flex;
+  content: "";
+  position: absolute;
+  width: 95%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  height: 6px;
+  background: #FFF;
+  transition: all 0.2s;
+  z-index: 2;
+ }
+ 
+ #right::before{left: -101%; top: 1%;}
+ #right::after{left: 101%; bottom:1%;}
+ 
+ #right:hover::before{
+  left: 3px;
+ }
+ #right:hover::after{
+  left: 3px;
+ }
+
+ #right:hover .txt2{
+  transform: scale(1);
+  opacity: 1;
+ }
+ 
+.prestamop p{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* solicitarmiprestamo.jsp menu prestamoestudiante*/
+
+.prestamo-estudiante{
+    display: none;
+}
+
+#cerrarPE {
+  position: absolute;
+  top: 7%;
+  right: 37.8%;
+  z-index: 99;
+}
+
+/* solicitarmiprestamo.jsp menu prestamopersonal */
+
+.prestamo-personal{
+    display: none;
+    position: absolute;
+    top: 30%;
+    background-color: red;
+    z-index: 90;
+    width: 40%;
+    left: 5%;
+
+}
+.prestamo-personal h1{
+    text-align: center;
+}
+.prestamo-personal .pp{
+    padding: 5px;
+}
+.prestamo-personal .pp input{
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+.prestamo-personal .pp label{
+    margin-right: 10px;
+}
+
+#cerrarPP {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  z-index: 99;
+}
+
+/* Barra de Plazo */
+
+#rangeValue{
+    position: absolute;
+    width: 50px;
+    box-sizing: border-box;
+    background: #FFF;
+    text-align: center;
+    top: 30%;
+    left: 90%;
+}
+
+.rangev{
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+}
+
+#rangeValue:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background: #FFF;    
+}
+
+.range{
+    width: 30%;
+    height: 2px;
+    background: black;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 2px;
+    
+}
+
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: skyblue;
+}

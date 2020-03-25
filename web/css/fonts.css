@@ -46,3 +46,6 @@
 .icon-menu:before {
   content: "\e9bd";
 }
+.icon-drive:before {
+  content: "\e963";
+}
