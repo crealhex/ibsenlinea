@@ -23,7 +23,7 @@
 
             <h2>Requisitios para obtener un prestamo</h2>
             <div class="boxp">
-            <a href="solicitarprestamo.jsp">Solicitar prestamo</a>
+            <a href="javascript:abrirLog()">Solicitar prestamo</a>
             </div>
 
     </body>
