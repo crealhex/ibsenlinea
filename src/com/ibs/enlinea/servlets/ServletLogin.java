@@ -22,22 +22,14 @@ public class ServletLogin extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-//        PrintWriter out = response.getWriter();
 
         String currPage = request.getParameter("origin");
         String nextPage = request.getParameter("next");
         String correo = request.getParameter("correo");
         String password = request.getParameter("pass");
 
-//        consulta query = new consulta();
-//        if (query.autenticacion(correo, password)) {
-//            response.sendRedirect("index.jsp");
-//        } else {
-//            request.setAttribute("loginState", false);
-//            request.getRequestDispatcher("index.jsp").forward(request, response);
-//        }
-
-        if (correo.equals("123")) {
+        consulta query = new consulta();
+        if (query.autenticacion(correo, password)) {
             response.sendRedirect(nextPage);
         } else {
             request.setAttribute("loginState", false);
