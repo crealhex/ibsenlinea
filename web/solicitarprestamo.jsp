@@ -69,10 +69,11 @@
                 <option value=$>10000</option>
             </select>
             <div class="rangev">
-                <span id="rangeValue">0</span>
+                <span id="rangeValuep">0</span>
                 <label for="range">Seleccione las cuotas en las que desea pagar:</label>
                 <input type="range" class="range" name="" value="0" min="2" max="24" onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)">
             </div>
+            <input type="submit" class="solpp" value="Solicitar Prestamo"><br>
             <label for="pagoxmes">Pago por mes:</label>
             <input type="text" name="pagoxmes"><br>
             <label for="card_number">Número de tarjeta:</label>
@@ -84,23 +85,44 @@
         </form>
     </div>
         
-        
+          
         <div class="prestamo-estudiante" id="prestamo-estudiante">
-            <div id="cerrarPE"><a href="javascript:cerrarPE()"><img src="img/cerrar.png"></a></div>
-            <form class ="box" action="ServletRegister" method="post">
-                <h1>Registrarse</h1>
-                <input type="text" name="name" placeholder="Nombres y apellidos">
-                <input type="text" name="email" placeholder="Correo electronico">
-                <input type="text" name="id" placeholder="DNI">
-                <input type="text" name="number" placeholder="Numero de celular">
-                <input type="text" name="age" placeholder="Edad">
-                <input type="password" name="password" placeholder="Ingrese una contraseña">
-                <input type="password" name="password" placeholder="Repita la contraseña">
-                <input type="submit" name="register" value="Registrarse">
-            <div class="buttom-text-r">
-                ¿Ya tienes una cuenta? <a href="login.jsp">Iniciar sesión</a>
+            <div id="cerrarPE"><a href="javascript:cerrarPE()"><img src="img/close1.png"></a></div>
+            <form class ="pe" action="ServletPrestamo" method="post">
+            <h1>Prestamo Personal</h1>
+            <input id="ppState" type="hidden" value="${ppState}">
+            <input type="text" name="id" placeholder="DNI">
+            <label for="tprestamop">Elija un tipo de prestamo:</label>
+            <select id="tprestamop">
+                <option value="pp">Prestamo Estudiantil</option>
+            </select><br>
+            <label for="fecha">Fecha de inicio del prestamo:</label>
+            <input type="date" name="fecha"><br>
+            <label for="amount">Elija la cantidad que requiere:</label>
+            <select id="amount">
+                <option value=$>4000</option>
+                <option value=$>5000</option>
+                <option value=$>6000</option>
+                <option value=$>7000</option>
+                <option value=$>8000</option>
+                <option value=$>9000</option>
+                <option value=$>10000</option>
+            </select>
+            <div class="rangev">
+                <span id="rangeValuee">0</span>
+                <label for="range">Seleccione las cuotas en las que desea pagar:</label>
+                <input type="range" class="range" name="" value="0" min="2" max="24" onmousemove="rangeSlider1(this.value)" onchange="rangeSlider1(this.value)">
             </div>
-            </form>
+            <input type="submit" class="solpp" value="Solicitar Prestamo"><br>
+            <label for="pagoxmes">Pago por mes:</label>
+            <input type="text" name="pagoxmes"><br>
+            <label for="card_number">Número de tarjeta:</label>
+            <input type="text" name="card_number"><br>
+            <label for="date">Fecha de creación de la tarjeta:</label>
+            <input type="date" name="date"><br>
+            <label for="text">Codigo de la tarjeta:</label>
+            <input type="text" name="card_safecode">
+        </form>
         </div>
         
         
@@ -118,7 +140,7 @@
         }
         function abrirPE(){
             document.getElementById("prestamo-estudiante").style.display="block";
-            cerrarpp();
+            cerrarPP();
         }
         function cerrarPE(){
             document.getElementById("prestamo-estudiante").style.display="none";
@@ -127,7 +149,10 @@
     
     <script type="text/javascript">
         function rangeSlider(value){
-            document.getElementById('rangeValue').innerHTML = value;
+            document.getElementById('rangeValuep').innerHTML = value;
+        }
+        function rangeSlider1(value){
+            document.getElementById('rangeValuee').innerHTML = value;
         }
     </script>
 </html>

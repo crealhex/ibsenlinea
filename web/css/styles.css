@@ -310,16 +310,45 @@ body {
 
 .prestamo-estudiante{
     display: none;
+    position: absolute;
+    top: 30%;
+    background-color: #37A8EA;
+    z-index: 90;
+    width: 40%;
+    right: 5%;
+}
+
+.prestamo-estudiante h1{
+    text-align: center;
+}
+
+.prestamo-estudiante .pe{
+    padding: 5px;
+}
+
+.prestamo-estudiante .pe input{
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.prestamo-estudiante .pe label{
+    margin-right: 10px;
 }
 
 #cerrarPE {
   position: absolute;
-  top: 7%;
-  right: 37.8%;
+  top: 0%;
+  right: 0%;
   z-index: 99;
 }
 
-/* solicitarmiprestamo.jsp menu prestamopersonal */
+.prestamo-estudiante input[type="submit"]{
+    position: relative;
+    left: 40%;
+    text-align: center;
+}
+
+/* solicitarmiprestamo.jsp menu prestamo-personal */
 
 .prestamo-personal{
     display: none;
@@ -351,17 +380,24 @@ body {
   right: 0%;
   z-index: 99;
 }
-
-/* Barra de Plazo */
-
-#rangeValue{
+.prestamo-personal input[type="submit"]{
+    position: relative;
+    left: 40%;
+    text-align: center;
+}
+/* Rango de Prestamo-Personal*/
+#rangeValuep, #rangeValuee{
     position: absolute;
     width: 50px;
     box-sizing: border-box;
     background: #FFF;
     text-align: center;
-    top: 30%;
+    top: 4px;
     left: 90%;
+}
+.rangev label{
+    position: relative;
+    top: 4px;
 }
 
 .rangev{
@@ -371,7 +407,7 @@ body {
     
 }
 
-#rangeValue:before{
+#rangeValuep:before, #rangeValuee:before{
     content: '';
     position: absolute;
     top: 50%;
@@ -399,3 +435,4 @@ body {
     border-radius: 50%;
     background: skyblue;
 }
+

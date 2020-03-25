@@ -5,6 +5,7 @@
  */
 package com.ibs.enlinea.servlets;
 
+import com.ibs.enlinea.dao.mysql.consulta;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
