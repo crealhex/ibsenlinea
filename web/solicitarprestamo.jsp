@@ -48,7 +48,7 @@
         
         <div class="prestamo-personal" id="prestamo-personal">
         <div id="cerrarPP"><a href="javascript:cerrarPP()"><img src="img/close1.png"></a></div>
-        <form class ="pp" action="ServletPrestamo" method="post">
+        <form class ="pp" action="ServletPrestamo" method="get">
             <h1>Prestamo Personal</h1>
             <input id="ppState" type="hidden" value="${ppState}">
             <input type="text" name="idp" placeholder="DNI">
@@ -60,13 +60,13 @@
             <input type="text" name="fechap"><br>
             <label for="amount">Elija la cantidad que requiere:</label>
             <select id="amount" name="amountp">
-                <option value=$>4000</option>
-                <option value=$>5000</option>
-                <option value=$>6000</option>
-                <option value=$>7000</option>
-                <option value=$>8000</option>
-                <option value=$>9000</option>
-                <option value=$>10000</option>
+                <option value="1000">4000</option>
+                <option value="1000">5000</option>
+                <option value="1000">6000</option>
+                <option value="1000">7000</option>
+                <option value="1000">8000</option>
+                <option value="1000">9000</option>
+                <option value="1000">10000</option>
             </select>
             <div class="rangev">
                 <span id="rangeValuep">0</span>
