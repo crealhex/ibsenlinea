@@ -81,5 +81,38 @@
         }
         return false;
     }
+       
+    public boolean SolicitarPrestamoP(String id_student, String type, String started_at, double amount, int dues, double pagoxmes, String card_number, String card_date, int card_safecode){
+        PreparedStatement pst = null;
         
+        try {
+            String consulta = "insert into student_service (id_student, type, started_at, amount, dues, pagoxmes, card_number, card_date, card_safecode) values (?, ?, ?. ?, ?, ?, ?, ?, ?)";
+            pst = connect().prepareStatement(consulta);
+            pst.setString(1, id_student);
+            pst.setString(2, type);
+            pst.setString(3, started_at);
+            pst.setDouble(4, amount);
+            pst.setInt(5, dues);
+            pst.setDouble(6, pagoxmes);
+            pst.setString(7, card_number);
+            pst.setString(8, card_date);
+            pst.setInt(9, card_safecode);
+            
+            if(pst.executeUpdate() == 1){
+                return true;
+            }
+            
+        } catch (Exception e) {
+            System.out.println("ERROR" + e);
+        }finally{
+            try {
+                if(connect() != null) connect().close();
+                if(pst != null) pst.close();
+            } catch (Exception e) {
+                System.out.println("ERROR" + e);
+            }
+        }
+        return false;
+    }
+    
     }

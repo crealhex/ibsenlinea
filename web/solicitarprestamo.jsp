@@ -51,15 +51,15 @@
         <form class ="pp" action="ServletPrestamo" method="post">
             <h1>Prestamo Personal</h1>
             <input id="ppState" type="hidden" value="${ppState}">
-            <input type="text" name="id" placeholder="DNI">
+            <input type="text" name="idp" placeholder="DNI">
             <label for="tprestamop">Elija un tipo de prestamo:</label>
-            <select id="tprestamop">
+            <select id="tprestamop" name="tprestamop">
                 <option value="pp">Prestamo Personal</option>
             </select><br>
-            <label for="fecha">Fecha de inicio del prestamo:</label>
-            <input type="date" name="fecha"><br>
+            <label for="fechap">Fecha de inicio del prestamo:</label>
+            <input type="text" name="fechap"><br>
             <label for="amount">Elija la cantidad que requiere:</label>
-            <select id="amount">
+            <select id="amount" name="amountp">
                 <option value=$>4000</option>
                 <option value=$>5000</option>
                 <option value=$>6000</option>
@@ -71,17 +71,18 @@
             <div class="rangev">
                 <span id="rangeValuep">0</span>
                 <label for="range">Seleccione las cuotas en las que desea pagar:</label>
-                <input type="range" class="range" name="" value="0" min="2" max="24" onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)">
+                <input type="range" class="range" name="duesp" value="0" min="2" max="24" onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)">
             </div>
-            <input type="submit" class="solpp" value="Solicitar Prestamo"><br>
-            <label for="pagoxmes">Pago por mes:</label>
-            <input type="text" name="pagoxmes"><br>
-            <label for="card_number">Número de tarjeta:</label>
-            <input type="text" name="card_number"><br>
-            <label for="date">Fecha de creación de la tarjeta:</label>
-            <input type="date" name="date"><br>
-            <label for="text">Codigo de la tarjeta:</label>
-            <input type="text" name="card_safecode">
+            <br>
+            <label for="pagoxmesp">Pago por mes:</label>
+            <input type="text" name="pagoxmesp"><br>
+            <label for="card_numberp">Número de tarjeta:</label>
+            <input type="text" name="card_numberp"><br>
+            <label for="card_datep">Fecha de creación de la tarjeta:</label>
+            <input type="text" name="card_datep"><br>
+            <label for="card_safecodep">Codigo de la tarjeta:</label>
+            <input type="text" name="card_safecodep"><br>
+            <input type="submit" class="solpp" value="Solicitar Prestamo">
         </form>
     </div>
         
