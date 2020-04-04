@@ -12,6 +12,10 @@
         <servlet-name>ServletPrestamo</servlet-name>
         <servlet-class>com.ibs.enlinea.servlets.ServletPrestamo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletMiPrestamo</servlet-name>
+        <servlet-class>com.ibs.enlinea.servlets.ServletMiPrestamo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletLogin</servlet-name>
         <url-pattern>/ServletLogin</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>ServletPrestamo</servlet-name>
         <url-pattern>/ServletPrestamo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletMiPrestamo</servlet-name>
+        <url-pattern>/ServletMiPrestamo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

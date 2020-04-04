@@ -63,7 +63,6 @@ public class consulta extends StartMySQL {
             pst.setString(5, password);
             pst.setInt(6, age);
 
-
             if (pst.executeUpdate() == 1) {
                 return true;
             }
@@ -72,8 +71,12 @@ public class consulta extends StartMySQL {
             System.out.println("ERROR" + e);
         } finally {
             try {
-                if (connect() != null) connect().close();
-                if (pst != null) pst.close();
+                if (connect() != null) {
+                    connect().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
             } catch (Exception e) {
                 System.out.println("ERROR" + e);
             }
@@ -81,21 +84,22 @@ public class consulta extends StartMySQL {
         return false;
     }
 
-    public boolean solicitarPrestamo(String id_student, String type, String started_at, double amount, int dues, double pagoxmes, String card_number, String card_date, int card_safecode) {
+    public boolean solicitarPrestamo(int id_service,String id_student, String type, String started_at, double amount, int dues, double pagoxmes, String card_number, String card_date, int card_safecode) {
         PreparedStatement pst = null;
         try {
-            String consulta = "insert into student_service (id_student, type, started_at, amount, dues, pagoxmes, card_number, card_date, card_safecode) values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String consulta = "insert into student_service (id_service, id_student, type, started_at, amount, dues, pagoxmes, card_number, card_date, card_safecode) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             pst = connect().prepareStatement(consulta);
-
-            pst.setString(1, id_student);
-            pst.setString(2, type);
-            pst.setString(3, started_at);
-            pst.setDouble(4, amount);
-            pst.setInt(5, dues);
-            pst.setDouble(6, pagoxmes);
-            pst.setString(7, card_number);
-            pst.setString(8, card_date);
-            pst.setInt(9, card_safecode);
+            
+            pst.setInt(1, id_service);
+            pst.setString(2, id_student);
+            pst.setString(3, type);
+            pst.setString(4, started_at);
+            pst.setDouble(5, amount);
+            pst.setInt(6, dues);
+            pst.setDouble(7, pagoxmes);
+            pst.setString(8, card_number);
+            pst.setString(9, card_date);
+            pst.setInt(10, card_safecode);
 
             if (pst.executeUpdate() == 1) {
                 return true;
@@ -113,6 +117,77 @@ public class consulta extends StartMySQL {
                 }
             } catch (Exception e) {
                 System.out.println("ERROR" + e);
+            }
+        }
+        return false;
+    }
+
+    public int id_service_autoincrement() {
+        int id_service = 1;
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+
+        try {
+            String consulta = "Select MAX(id_service) from student_service";
+            pst = connect().prepareStatement(consulta);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                id_service = rs.getInt(1) + 1;
+            }
+        } catch (Exception ex) {
+            System.out.println("Error" + ex);
+        } finally {
+            try {
+                if (connect() != null) {
+                    connect().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+
+            } catch (Exception e) {
+            }
+        }
+        return id_service;
+    }
+
+    public boolean miPrestamo(int id, String id_student, String type, String started_at, double amount, int dues, double pagoxmes, int duespagados, double pagado, int debt, int payday) {
+        PreparedStatement pst = null;
+        try {
+            String consulta = "insert into service (id, id_student, type, started_at, amount, dues, pagoxmes, duespagados, pagado, debt, payday) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            pst = connect().prepareStatement(consulta);
+                               
+            pst.setInt(1, id);
+            pst.setString(2, id_student);
+            pst.setString(3, type);
+            pst.setString(4, started_at);
+            pst.setDouble(5, amount);
+            pst.setInt(6, dues);
+            pst.setDouble(7, pagoxmes);
+            pst.setInt(8, duespagados);
+            pst.setDouble(9, pagado);
+            pst.setInt(10, debt);
+            pst.setInt(11, payday);
+
+            if (pst.executeUpdate() == 1) {
+                return true;
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error" + e);
+        } finally {
+            try {
+                if (connect() != null) {
+                    connect().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+            } catch (Exception e) {
+                System.out.println("Error" + e);
             }
         }
         return false;

@@ -1,44 +1,54 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: crealhex
-  Date: 3/1/2020
-  Time: 01:09
-  To change this template use File | Settings | File Templates.
+<%-- 
+    Document   : miprestamo
+    Created on : 01/04/2020, 05:09:37 AM
+    Author     : dolly
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-    <table border="1" cellpadding="10">
-        <thead>
-            <tr>
-                <th>DNI</th>
-                <th>Nombre</th>
-                <th>Tipo</th>
-                <th>Fecha de inicio</th>
-                <th>Total</th>
-                <th>Pendiente</th>
-                <th>Cuotas</th>
-                <th>Pago por mes</th>
-                <th>Fecha de Mensualidad</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>73822427</td>
-                <td>Luis Enco</td>
-                <td>Préstamo</td>
-                <td>15/08/2017</td>
-                <td>300 PEN</td>
-                <td>200 PEN</td>
-                <td>3</td>
-                <td>100 PEN</td>
-                <td>30</td>
-                <td><a href="${pageContext.request.contextPath}/pagar.jsp">Realizar pago</a></td>
-            </tr>
-        </tbody>
-    </table>
-</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <div class="miprestamo">
+
+            <label for="id-service">Id de servicio</label>
+            <input type="text" name="id-service"><br>
+
+            <label for="DNI">DNI</label>
+            <input type="text" name="DNI"><br>
+
+            <label for="tipo-prestamo">Tipo de prestamo</label>
+            <input type="text" name="tipo-prestami"><br>
+
+            <label for="fecha-inicio">Fecha de cuando se inició el prestamo</label>
+            <input type="text" name="fecha-inicio"><br>
+
+            <label for="cantidad-total-prestamo">Cantidad total del prestamo</label>
+            <input type="text" name="cantidad-total-prestamo"><br>
+
+            <label for="cantidad-cuotas">Cantidad de cuotas</label>
+            <input type="text" name="cantidad-cuotas"><br>
+
+            <label for="pago-mes">Pago por mes</label>
+            <input type="text" name="pago-mes"><br>
+
+            <label for="cantidad-cuotas-pagadas">Cantidad de cuotas pagadas hasta el momento</label>
+            <input type="text" name="cantidad-cuotas-pagadas"><br>
+
+            <label for="cantidad-total-pagada">Cantidad pagada hasta el momento</label>
+            <input type="text" name="cantidad-total-pagada"><br>
+
+            <label for="lo-que-debe">Lo que debe hasta el momento</label>
+            <input type="text" name="lo-que-debe"><br>
+
+            <label for="dia-de-pago">Día de pago</label>
+            <input type="text" name="dia-de-pago"><br>
+
+        </div>
+
+        
+    </body>
 </html>

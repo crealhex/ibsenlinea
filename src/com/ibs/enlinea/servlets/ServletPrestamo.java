@@ -23,6 +23,11 @@ public class ServletPrestamo extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
+        consulta increment = new consulta();
+
+        
+        /* POP PRESTAMO PERONAL*/
+        int servicio = increment.id_service_autoincrement();
         String id_student = request.getParameter("idp");
         String type = request.getParameter("tprestamop");
         String started_at = request.getParameter("fechap");
@@ -47,7 +52,7 @@ public class ServletPrestamo extends HttpServlet {
         }
 
         consulta query = new consulta();
-        boolean status = query.solicitarPrestamo(
+        boolean status = query.solicitarPrestamo(servicio,
                 id_student, type, started_at, cantidadtp,
                 cantidadtcp, pagomensual, card_number,
                 card_date, codigotarjeta
@@ -55,9 +60,46 @@ public class ServletPrestamo extends HttpServlet {
 
         if (status) {
             response.sendRedirect("index.jsp");
-            return;
+        } else {
+            response.sendRedirect("random.jsp");
         }
-        response.sendRedirect("random.jsp");
+
+        /* POP PRESTAMO ESTUDIANTIL*/
+        int servicioe = increment.id_service_autoincrement();
+        String id_studente = request.getParameter("ide");
+        String typee = request.getParameter("tprestamoe");
+        String started_ate = request.getParameter("fechae");
+        String amounte = request.getParameter("amounte");                //double
+        String duese = request.getParameter("duese");                    //int
+        String pagoxmese = request.getParameter("pagoxmese");            //double
+        String card_numbere = request.getParameter("card_numbere");
+        String card_datee = request.getParameter("card_datee");
+        String card_safecodee = request.getParameter("card_safecodee");
+
+        double cantidadte = 0;
+        int cantidadtce = 0;
+        double pagomensuale = 0;
+        int codigotarjetae = 0;
+
+        try {
+            cantidadte = Double.parseDouble(amounte);
+            cantidadtce = Integer.parseInt(duese);
+            pagomensuale = Double.parseDouble(pagoxmese);
+            codigotarjetae = Integer.parseInt(card_safecodee);
+        } catch (Exception e) {
+        }
+
+        boolean statuse = query.solicitarPrestamo(servicioe,
+                id_studente, typee, started_ate, cantidadte,
+                cantidadtce, pagomensuale, card_numbere,
+                card_datee, codigotarjetae
+        );
+
+        if (statuse) {
+            response.sendRedirect("index.jsp");
+        } else {
+            response.sendRedirect("random.jsp");
+        }
     }
 
     @Override

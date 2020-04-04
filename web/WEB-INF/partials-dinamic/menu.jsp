@@ -28,7 +28,7 @@
             <input type="password" name="pass" placeholder="Contraseña">
             <input type="submit" name="login" value="Login">
             <div class="buttom-text">
-                ¿No tienes una cuenta? <a href="register.jsp">Registrate</a>
+                ¿No tienes una cuenta? <a href="javascript:abrirReg()">Registrate</a>
             </div>
         </form>
     </div>
